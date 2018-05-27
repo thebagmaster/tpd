@@ -1,0 +1,24 @@
+chains ,
+c cancels your chain
+rof
+wf 
+n no center
+cr2 charged
+/ cmds | 10 repeat cmds 10
+wf-199 199 frames
+nha release all toggles
+ho hold o
+hwf half walk fwd
+
+
+
+server -> store
+	push html content
+
+server -> client
+	send chat msgs
+	request mem content
+
+client -> server
+	on sent chat return exed cmds
+	return json mem content

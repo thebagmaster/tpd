@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180"
+																 href="/ico/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32"
+																		href="/ico/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16"
+																		href="/ico/favicon-16x16.png">
+		<link rel="manifest" href="/ico/site.webmanifest">
+		<link rel="mask-icon" href="/ico/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="/ico/favicon.ico">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-config" content="/ico/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+
+		<link rel="preload" href="img/creator.gif" as="image">
+		<link rel="preload" href="img/dance.gif" as="image">
+		<link rel="preload" href="img/gaping.gif" as="image">
+		<link rel="preload" href="img/meh.gif" as="image">
+		<link rel="preload" href="img/onion.gif" as="image">
+		<link rel="preload" href="img/praise.gif" as="image">
+
+		<title>Twitch Plays Dark</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/chat.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/socket.io-client/dist/socket.io.slim.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/require.js"></script>
+    <script src="/js/constants.js"></script>
+    <script src="/js/howler.js"></script>
+  </head>
+  <body>
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      width="261px" height="222px" viewBox="0 0 261 222" 
+      enable-background="new 0 0 261 222" xml:space="preserve">
+    <path id="top"
+    d="M0,0c29.924,46.981,58.686,120.227,100,157c39.302,34.981,111.498,50.962,161,65H0V0z"  />
+    </svg>
+    
+    <ul class="list-group" id="messages"></ul>
+    <ul class="list-group" id="donos"></ul>
+    
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      width="261px" height="222px" viewBox="0 0 261 222" 
+      enable-background="new 0 0 261 222" xml:space="preserve"
+      style="transform: rotate(180deg)  scale(-1, 1); top:570px; left:0px; position:absolute;">
+    <path id="top"
+    d="M0,0c29.924,46.981,58.686,120.227,100,157c39.302,34.981,111.498,50.962,161,65H0V0z"  />
+    </svg>
+
+		<div class="controls overlay">
+			<span class=uni>⬆️</span>
+			<span class=exp>f</span>
+			<br>
+			<span class=uni>⬅️</span>
+			<span class=exp>l</span>
+			<br>
+			<span class=uni>➡️</span>
+			<span class=exp>r</span>
+			<br>
+			<span class=uni>⬇️</span>
+			<span class=exp>b</span>
+			<br>
+			<span class=uni>↖️</span>
+			<span class=exp>fl</span>
+			<br>
+			<span class=uni>↗️</span>
+			<span class=exp>fr</span>
+			<br>
+			<span class=uni>↘️</span>
+			<span class=exp>bl</span>
+			<br>
+			<span class=uni>↙️</span>
+			<span class=exp>br</span>
+			<br>
+			<span class=uni>⤵️</span>
+			<span class=exp>d</span>
+			<br>
+			<span class=uni>🏃</span>
+			<span class=exp>run</span>
+			<br>
+			<span class=uni>🗡️</span>
+			<span class=exp>r1</span>
+			<br>
+			<span class=uni>🔨</span>
+			<span class=exp>r2</span>
+			<br>
+			<span class=uni>👟</span>
+			<span class=exp>k</span>
+			<br>
+			<span class=uni>🤾</span>
+			<span class=exp>ja</span>
+			<br>
+			<span class=uni>🛡️</span>
+			<span class=exp>l1</span>
+			<br>
+			<span class=uni>🏹</span>
+			<span class=exp>l2</span>
+			<br>
+			<span class=uni>⚔️</span>
+			<span class=exp>sa</span>
+			<br>
+			<span class=uni>🙌</span>
+			<span class=exp>g</span>
+			<br>
+			<span class=uni>🙆</span>
+			<span class=exp>ges</span>
+			<br>
+			<span class=uni>🤸⬆️</span>
+			<span class=exp>rf</span>
+			<br>
+			<span class=uni>🤸⬅️</span>
+			<span class=exp>rl</span>
+			<br>
+			<span class=uni>🤸➡️</span>
+			<span class=exp>rr</span>
+			<br>
+			<span class=uni>🤸⬇️</span>
+			<span class=exp>rd</span>
+			<br>
+			<span class=uni>➕⬆️</span>
+			<span class=exp>du</span>
+			<br>
+			<span class=uni>➕⬅️</span>
+			<span class=exp>dl</span>
+			<br>
+			<span class=uni>➕➡️</span>
+			<span class=exp>dr</span>
+			<br>
+			<span class=uni>➕⬇️</span>
+			<span class=exp>dd</span>
+			<br>
+			<span class=uni>⬆️🔑</span>
+			<span class=exp>aru</span>
+			<br>
+			<span class=uni>⬅️🔑</span>
+			<span class=exp>arl</span>
+			<br>
+			<span class=uni>➡️🔑</span>
+			<span class=exp>arr</span>
+			<br>
+			<span class=uni>⬇️🔑</span>
+			<span class=exp>ard</span>
+			<br>
+			<span class=uni>🍊</span>
+			<span class=exp>u</span>
+			<br>
+			<span class=uni>🆗</span>
+			<span class=exp>e</span>
+			<br>
+			<span class=uni>💬</span>
+			<span class=exp>a</span>
+			<br>
+			<span class=uni>📷⬆️</span>
+			<span class=exp>cu</span>
+			<br>
+			<span class=uni>📷➡️</span>
+			<span class=exp>cl</span>
+			<br>
+			<span class=uni>📷➡️</span>
+			<span class=exp>cr</span>
+			<br>
+			<span class=uni>📷⬇️</span>
+			<span class=exp>cd</span>
+	</div>
+
+		<div class="overlay juke">
+			<span class="juke-title"></span>
+			<div id=juke>
+			</div>
+		</div>
+
+		<ul class="overlay top-points">
+			<span class="top-title"></span>
+		</ul>
+
+		<div class="overlay alert">
+			<div class=alertbox>
+			</div>
+		</div>
+
+		<div class="overlay activecmd">
+		</div>
+
+    <script src="/js/sound.js"></script>
+    <script src="/js/core.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,8 @@
+@font-face {
+	font-family: "Optimus";
+	src: url("/css/fonts/OptimusPrinceps");
+}
+@font-face {
+	font-family: "OptimusBold";
+	src: url("/css/fonts/OptimusPrincepsSemiBold");
+}

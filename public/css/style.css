@@ -1,0 +1,131 @@
+body {
+  background:url('/img/ds1.jpg');
+	background-color:black;
+  overflow:hidden;
+	user-select: none;
+}
+
+#top{
+  fill: #000;
+  stroke: #282828;
+  stroke-width:1;
+}
+
+#donos {
+  height:240px;
+  width:150px;
+  position:absolute;
+  bottom:0px;
+	right:0px;
+}
+#donos li{
+	background-color:black;
+  padding:2px;
+	text-align: center;
+	overflow:hidden;
+	white-space: nowrap;
+}
+.gif{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.activecmd{
+	left: 50%;
+	width:100px;
+	height:100px;
+	bottom:10%;
+	transform: translate(-50%,-50%);
+}
+#messages {
+  height:600px;
+  width:420px;
+  position:absolute;
+  top:220px;
+}
+
+#messages li {
+  padding:5px;
+  white-space: nowrap;
+  overflow: hidden;
+  clear: both;
+	background-color:black;
+}
+
+#messages img{
+  height:19px;
+}
+
+.overlay{
+	position:absolute;
+	background-color:black;
+	border-radius: 0.25rem;
+}
+
+.controls{
+	width:80px;
+	top:0px;
+	right:0px;
+}
+.uni{
+	min-width: 50px;
+	display: inline-block;
+  text-align: center;
+	font-family: "Segoe UI Emoji";
+}
+.juke{
+	bottom:0px;
+	left:0px;
+	width:280px;
+}
+.juke-title{
+	display:block;
+	padding: 0px 10px 0px 10px;
+}
+#juke{
+	margin-left:10px;
+	margin-right:10px;
+	margin-bottom:7px;
+}
+.top-points{
+	bottom:162px;
+	width:140px;
+	overflow:hidden;
+	list-style-type: none;
+	padding-left:10px;
+}
+.user{
+	max-width:90px;
+	display:inline-block;
+	overflow:hidden;
+	height:16px;
+}
+.leader-title{
+	font-weight:bolder;
+}
+#messages li{
+	height:33px;
+}
+.alert{
+	width:100%;
+	top:0%;
+	left:0;
+	background:none;
+	text-align:center;
+}
+.alertbox{
+  animation: alertglow .5s infinite alternate;
+	max-width: 70%;
+	margin: 0 auto;
+	display:none;
+	padding:10px;
+	font-size:30px;
+	background-color:black;
+	border-radius: 0.25rem;
+}
+@keyframes alertglow {
+	to {
+		text-shadow: 0 0 20px white;
+	}
+}

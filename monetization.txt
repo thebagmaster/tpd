@@ -1,0 +1,23 @@
+earning
++ chat
++ tpdcmd
++ sub chat
++ donations $$
++ bits $$
++ existing
++ sub existing
+
+spending
+  buy demo time
+  jukebox requests
++ tax gambling
++ buy tpd chat emojis (approval)
++ css names (rs)
++ raffling
+  onscreen alerts goofy
+  soundboard
+  text to speech (filtered) nazis
++ lotto  
+
+TODO
++ Blacklist all other traffic

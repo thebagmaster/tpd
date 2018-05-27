@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+		<link rel="prefetch" href="/img/bg.jpg">
+    <link rel="apple-touch-icon" sizes="180x180"
+																 href="/ico/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32"
+																		href="/ico/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16"
+																		href="/ico/favicon-16x16.png">
+		<link rel="manifest" href="/ico/site.webmanifest">
+		<link rel="mask-icon" href="/ico/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="/ico/favicon.ico">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-config" content="/ico/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+		<title>Twitch Plays Dark Store!</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/store.css">
+    <link rel="stylesheet" href="/css/chat.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/constants.js"></script>
+    <script src="/js/howler.js"></script>
+  </head>
+  <body>
+		<div class="container">
+			<h1 class="titlebanner text-center">TWITCH PLAYS DARK STORE</h1>
+			<div class="links">
+				<a href="http://twitch.tv/twitchplaysdark">
+					<img height=20 src="/img/twitch.svg">
+					twitch.tv/twitchplaysdark</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="http://reddit.com/r/twitchplaysdark">
+					<img height=20 src="/img/reddit.svg">
+					/r/twitchplaysdark</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="http://twitter.com/twitchplaysdark">
+					<img height=20 src="/img/twitter.svg">
+					twitter.com/twitchplaysdark</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="https://streamlabs.com/twitchplaysdark">
+					💵 Donations!</a>
+		</div>
+			<div class="jumbotron">
+				<h3>Score</h3>
+				<p>
+				Gain points by typing in chat 1, 10 for subs<br>
+				Gain points by existing in chat every 5 minutes 1<br>
+				Gain points by gambling! (below)<br>
+				Gain points by the lotto! (below)<br>
+				<strong>!score</strong><br>
+				</p>
+			</div>
+			<div class="jumbotron">
+				<h3>Gamble</h3>
+				<p>
+				Gamble your points away!<br>
+				Specify your chance of winning!<br>
+				If you win your winnings are proportional to your chance.<br>
+				Specify your bet last.<br>
+				A 1 in 2 chance to double your 100 points:<br>
+				<strong>!gamble 1:2 100</strong><br>
+				A 1 in 10 chance to win 10x your 10 points:<br>
+				<strong>!gamble 1:10 10</strong><br>
+				</p>
+			</div>
+			<div class="jumbotron">
+				<h3>Styles</h3>
+				<p>
+				The style of your name 1M each
+				<br>
+				<strong>!buy style troll</strong>
+				</p>
+				<div id="styles">
+				</div>
+			</div>
+			
+			<div class="jumbotron">
+				<h3>Soundboard</h3>
+				<p>
+				Play a sound on stream 1k each
+				<br>        
+				<strong>!sound Balls</strong>
+				</p>
+				<div id="sounds">
+				</div>
+			</div>
+
+			<div class="jumbotron">
+				<h3>Icons</h3>
+				<p>
+				The small badge next to your name 10k each
+				<br>        
+				<strong>!buy icon 1002</strong>
+				</p>
+				<div id="icons">
+				</div>
+			</div>
+
+			<input type="text" value="" id="copycmd">
+			<div class=tooltip></div>
+
+			<script src="/js/sound.js"></script>
+			<script src="/js/store.js"></script>
+		</div>
+  </body>
+</html>

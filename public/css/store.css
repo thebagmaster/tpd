@@ -1,0 +1,66 @@
+body{
+  background:url('/img/bg.jpg');
+	background-color:black;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	background-position: center; 
+}
+#icons {
+}
+.icon{
+  font-size:30px;
+  display:inline;
+  cursor:pointer;
+  position:relative;
+}
+.icon .ino{
+  position:absolute;
+  z-index:10000;
+  top:0px;
+  left:5%;
+  font-size:8px;
+  background-color:#111;
+  padding:1px;
+  width:90%;
+  text-align:center;
+  opacity:.8;
+}
+.titlebanner {
+	font-family:"OptimusBold";
+	text-shadow: 0 0 20px Coral;
+}
+.jumbotron{
+	background-color:rgba(40,40,40,0.8);
+}
+.links{
+	padding:20px;
+	background-color: rgba(40,40,40,0.8);
+	margin-bottom:2rem;
+	border-radius: 0.3rem;
+}
+.sound{
+	padding:10px;
+	display: inline-block;
+	cursor:pointer;
+}
+.sound:hover{
+	font-weight:bold;
+}
+#copycmd{
+	position:absolute;
+	left:-3000px;
+	top:0px;
+}
+.st{
+	cursor:pointer;
+}
+.tooltip {
+	opacity:1;
+	margin:10px;
+	padding:12px;
+	border:2px solid #666;
+	position: absolute;
+	display: none;
+	z-index:10001;
+	background-color: rgba(40,40,40,0.9);
+}
